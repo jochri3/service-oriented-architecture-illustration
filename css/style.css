@@ -1,0 +1,107 @@
+html,
+body {
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+}
+
+
+#format,
+#sys_1,
+#sys_2 {
+  position: absolute;
+  font-size: 16px;
+  font-family: 'Operator Mono';
+  font-weight: bold;
+}
+
+#format {
+  text-align: center;
+  left: 540px;
+}
+
+#sys_1 {
+  left: 200px;
+}
+
+#sys_2 {
+  left: 950px;
+}
+
+img {
+  width: 140px;
+  height: 70px;
+}
+
+.soa {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: absolute;
+}
+#systeme_1 {
+  left: 0px;
+}
+
+#systeme_2 {
+  left: 1200px;
+}
+
+#couche_service_1 {
+  background: #5356dd;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  transform: rotateY(0deg);
+  text-align: center;
+  left: 420px;
+}
+
+#couche_service_2 {
+  background: #5356dd;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  transform: rotateY(0deg);
+  text-align: center;
+  left: 800px;
+}
+
+#state_container {
+  background: url('../img/api-provider.png');
+  background-repeat: no-repeat;
+  animation: soa_animation 8s 1s linear infinite;
+}
+
+@keyframes soa_animation {
+  0% {
+    left: 0px;
+    background: url('../img/api-provider.png');
+    background-repeat: no-repeat;
+  }
+  40% {
+    background: url('../img/api-provider.png');
+    background-repeat: no-repeat;
+    visibility: hidden;
+  }
+  40.3% {
+    visibility: visible;
+    background: url('../img/xml-json-format.png');
+    background-repeat: no-repeat;
+  }
+  70% {
+    background: url('../img/xml-json-format.png');
+    background-repeat: no-repeat;
+  }
+  80% {
+    background: url('../img/api-consumer.png');
+    background-repeat: no-repeat;
+    visibility: visible;
+  }
+  100% {
+    background: url('../img/api-consumer.png');
+    background-repeat: no-repeat;
+    left: 1200px;
+  }
+}
